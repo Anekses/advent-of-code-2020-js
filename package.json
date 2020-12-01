@@ -1,0 +1,18 @@
+{
+  "name": "advent-of-code-2020-js",
+  "version": "1.0.0",
+  "description": "Advent of Code 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha day-**/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/Anekses/advent-of-code-2020-js.git"
+  },
+  "author": "Adrian Rydzyński <adrian.rydzynski@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}
