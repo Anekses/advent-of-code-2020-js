@@ -25,4 +25,4 @@ const check = () => {
 
 check();
 
-module.exports = two;
+// module.exports = two;

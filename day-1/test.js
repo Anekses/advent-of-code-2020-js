@@ -2,7 +2,7 @@ const assert = require("assert");
 const one = require("./one");
 const two = require("./two");
 
-describe("Part One", () => {
+describe.skip("Part One", () => {
   it("should return 514579 with input", () => {
     let input = `1721
     979
@@ -14,7 +14,7 @@ describe("Part One", () => {
   });
 });
 
-describe("Part Two", () => {
+describe.skip("Part Two", () => {
   it("should return 241861950 with input", () => {
     let input = `1721
         979

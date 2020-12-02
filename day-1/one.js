@@ -22,4 +22,4 @@ const check = () => {
 
 check();
 
-module.exports = one;
+// module.exports = one;
