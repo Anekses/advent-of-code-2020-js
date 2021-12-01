@@ -2,26 +2,34 @@ const assert = require("assert");
 const one = require("./one");
 const two = require("./two");
 
-describe.skip("Part One", () => {
+describe("Part One", () => {
   it("should return 514579 with input", () => {
-    let input = `1721
-    979
-    366
-    299
-    675
-    1456`;
-    assert.strictEqual(one(input), 514579);
+    let input = `199
+    200
+    208
+    210
+    200
+    207
+    240
+    269
+    260
+    263`;
+    assert.strictEqual(one(input), 7);
   });
 });
 
-describe.skip("Part Two", () => {
+describe("Part Two", () => {
   it("should return 241861950 with input", () => {
-    let input = `1721
-        979
-        366
-        299
-        675
-        1456`;
-    assert.strictEqual(two(input), 241861950);
+    let input = `199
+    200
+    208
+    210
+    200
+    207
+    240
+    269
+    260
+    263`;
+    assert.strictEqual(two(input), 5);
   });
 });

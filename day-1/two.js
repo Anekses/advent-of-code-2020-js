@@ -2,27 +2,28 @@ const fs = require("fs");
 
 const two = (input) => {
   const numbers = input.split("\n").map((x) => parseInt(x));
+  let counter = 0;
+  let prevNumber;
 
-  for (let i = 0; i < numbers.length; i++) {
-    const firstNumber = numbers[i];
-    for (let j = 1; j < numbers.length; j++) {
-      const secondNumber = numbers[j];
-      for (let k = 2; k < numbers.length; k++) {
-        const thirdNumber = numbers[k];
-        if (firstNumber + secondNumber + thirdNumber == 2020) {
-          return firstNumber * secondNumber * thirdNumber;
-        }
-      }
-    }
+  for (let i = 1; i < numbers.length - 2; i++) {
+    let currentNumber = numbers[i];
+    prevNumber = numbers[i - 1];
+
+    const sumPrev = prevNumber + currentNumber + numbers[i + 1];
+    const sumNext = currentNumber + numbers[i + 1] + numbers[i + 2];
+
+    if (sumNext > sumPrev) counter++;
   }
+
+  return counter;
 };
 
-const check = () => {
-  fs.readFile("./input.txt", "utf-8", (err, data) => {
-    console.log(two(data));
-  });
-};
+// const check = () => {
+//   fs.readFile("./input.txt", "utf-8", (err, data) => {
+//     console.log(two(data));
+//   });
+// };
 
-check();
+// check();
 
-// module.exports = two;
+module.exports = two;
